@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News | Football News</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- ================= HEADER ================= -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- LOGO -->
+                <a href="index.html"
+                    class="text-2xl font-extrabold tracking-tight">GOAL</a>
+
+                <!--===== DESKTOP NAVIGATION =====-->
+                <nav class="hidden md:flex items-center gap-6">
+
+                    <a href="index.html" class="text-sm font-medium hover:text-gray-300 transition">Home</a>
+
+                    <a href="latest-news.html" class="text-sm font-medium text-red-500">News</a>
+
+                    <a href="#" class="text-sm font-medium hover:text-gray-300 transition">Transfers</a>
+
+                    <a href="#" class="text-sm font-medium hover:text-gray-300 transition">Scores</a>
+
+                    <a href="#"
+                        class="text-sm font-medium hover:text-gray-300 transition"> Teams</a>
+                </nav>
+
+
+                <!-- RIGHT SIDE ACTIONS -->
+                <div class="flex items-center gap-4">
+
+                    <!--===== SEARCH ========-->
+                    <button type="button" aria-label="Search"  class="hover:text-gray-300 transition">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            class="w-5 h-5">
+
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="m21 21-4.35-4.35m0 0A7.5 7.5 0 1 0 6.04 6.04a7.5 7.5 0 0 0 10.61 10.61Z" />
+                        </svg>
+
+                    </button>
+
+                    <!--======= PROFILE =====-->
+                    <button type="button" aria-label="Profile" class="hover:text-gray-300 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            class="w-5 h-5">
+
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15.75 6.75a3.75 3.75 0 1 1-7.5 0
+                                3.75 3.75 0 0 1 7.5 0ZM4.5 20.25a7.5
+                                7.5 0 0 1 15 0" />
+                        </svg>
+                    </button>
+
+
+                    <!--====== MOBILE MENU BUTTON =======-->
+                    <button id="menu-button"
+                        type="button"
+                        aria-label="Open menu"
+                        class="md:hidden hover:text-gray-300 transition">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            class="w-6 h-6">
+
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!--=========== MOBILE NAVIGATION =========-->
+        <nav id="mobile-menu"
+            class="hidden md:hidden border-t border-gray-700">
+
+            <div class="px-4 py-4 space-y-4">
+
+                <a href="index.html" class="block hover:text-gray-300 transition"> Home</a>
+
+                <a href="latest-news.html" class="block text-red-500"> News</a>
+
+                <a href="#" class="block hover:text-gray-300 transition">Transfers</a>
+
+                <a href="#" class="block hover:text-gray-300 transition"> Scores</a>
+
+                <a href="#" class="block hover:text-gray-300 transition">Teams</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- ================= BREAKING NEWS ================= -->
+
+    <div class="pt-16">
+
+        <div class="bg-red-600 text-white">
+
+            <div class="max-w-7xl mx-auto px-4 py-2">
+
+                <p class="text-sm font-semibold">
+                    BREAKING NEWS:
+                    <span class="font-normal ml-1">
+                        Latest football updates, transfers and match news.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="max-w-7xl mx-auto px-4 py-10">
+
+
+        <!-- PAGE TITLE -->
+
+        <section class="mb-8">
+
+            <h1 class="text-3xl md:text-4xl font-extrabold"> Latest News</h1>
+            <p class="mt-2 text-gray-600"> Stay updated with the latest football news from around the world. </p>
+        </section>
+
+
+        <!-- ================= NEWS FILTERS ================= -->
+
+        <section class="mb-8">
+
+            <div class="flex flex-wrap gap-3">
+
+                <button class="px-4 py-2 bg-black text-white rounded-full text-sm font-semibold">All</button>
+
+                <button class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-semibold hover:bg-gray-200 transition"> Premier League</button>
+
+                <button
+                    class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
+                    Transfers
+                </button>
+
+                <button
+                    class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
+                    Champions League
+                </button>
+
+                <button
+                    class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
+                    International
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- ================= NEWS ARTICLES ================= -->
+
+        <section>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+                <!-- STORY 1 -->
+
+                <article
+                    class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+
+                    <img
+                        src="assets/images/images1.png"
+                        alt="Football manager at a press conference"
+                        class="w-full h-56 object-cover">
+
+                    <div class="p-5">
+                        <p class="text-xs font-bold uppercase text-red-600"> Premier League</p>
+
+                        <h2 class="mt-2 text-xl font-bold" New manager promises exciting football ahead of the new season</h2>
+
+                        <p class="mt-2 text-sm text-gray-600">
+                            The manager discusses his plans and ambitions ahead of the upcoming campaign.
+                        </p>
+                        <p class="mt-4 text-xs text-gray-400"> 30 minutes ago </p>
+
+                    </div>
+                </article>
+
+
+                <!-- STORY 2 -->
+
+                <article
+                    class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+
+                    <img
+                        src="assets/images/images2.png"
+                        alt="Football player training"
+                        class="w-full h-56 object-cover">
+
+                    <div class="p-5">
+
+                        <p class="text-xs font-bold uppercase text-blue-600"> Training</p>
+
+                        <h2 class="mt-2 text-xl font-bold">
+                            Star midfielder returns to training ahead of crucial fixtures
+                        </h2>
+
+                        <p class="mt-2 text-sm text-gray-600">
+                            The player has returned to team training after missing recent matches.
+                        </p>
+
+                        <p class="mt-4 text-xs text-gray-400"> 1 hour ago</p>
+
+                    </div>
+                </article>
+
+
+                <!-- STORY 3 -->
+
+                <article
+                    class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+
+                    <img
+                        src="assets/images/images3.png"
+                        alt="Football stadium filled with supporters"
+                        class="w-full h-56 object-cover">
+
+                    <div class="p-5">
+
+                        <p class="text-xs font-bold uppercase text-green-600"> Matchday </p>
+
+                        <h2 class="mt-2 text-xl font-bold"> Fans prepare for a huge match under the lights </h2>
+
+                        <p class="mt-2 text-sm text-gray-600">
+                            Supporters are getting ready for one of the most anticipated matches of the week.
+                        </p>
+                        <p class="mt-4 text-xs text-gray-400">  2 hours ago </p>
+
+                    </div>
+                </article>
+
+
+                <!-- STORY 4 -->
+
+                <article
+                    class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+
+                    <img
+                        src="assets/images/images4.png"
+                        alt="Football player celebrating a goal"
+                        class="w-full h-56 object-cover">
+
+                    <div class="p-5">
+
+                        <p class="text-xs font-bold uppercase text-purple-600">  Champions League </p>
+
+                        <h2 class="mt-2 text-xl font-bold">
+                            Late goal sends European clash into dramatic finish
+                        </h2>
+
+                        <p class="mt-2 text-sm text-gray-600">
+                            A late goal changed the momentum of an entertaining European encounter.
+                        </p>
+
+                        <p class="mt-4 text-xs text-gray-400"> 3 hours ago  </p>
+                    </div>
+                </article>
+
+
+                <!-- STORY 5 -->
+
+                <article
+                    class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+
+                    <img
+                        src="assets/images/images5.png"
+                        alt="Football national team players"
+                        class="w-full h-56 object-cover">
+
+                    <div class="p-5">
+
+                        <p class="text-xs font-bold uppercase text-orange-600">International</p>
+
+                        <h2 class="mt-2 text-xl font-bold">
+                            National team announces squad for upcoming international matches
+                        </h2>
+
+                        <p class="mt-2 text-sm text-gray-600">
+                            Several young players have been included in the squad for the upcoming fixtures.
+                        </p>
+
+                        <p class="mt-4 text-xs text-gray-400"> 4 hours ago</p>
+                    </div>
+                </article>
+
+
+                <!-- STORY 6 -->
+
+                <article
+                    class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+
+                    <img
+                        src="assets/images/images6.png"
+                        alt="Football coach giving instructions"
+                        class="w-full h-56 object-cover">
+
+                    <div class="p-5">
+
+                        <p class="text-xs font-bold uppercase text-yellow-600">  Football </p>
+
+                        <h2 class="mt-2 text-xl font-bold">
+                            Coach reveals the importance of teamwork ahead of next match
+                        </h2>
+
+                        <p class="mt-2 text-sm text-gray-600">
+                            The coach believes strong teamwork will be key to securing a positive result.
+                        </p>
+
+                        <p class="mt-4 text-xs text-gray-400"> 5 hours ago </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ================= LOAD MORE ================= -->
+
+        <div class="flex justify-center mt-10">
+
+            <button
+                class="px-6 py-3 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition">
+
+                Load More News
+            </button>
+        </div>
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-black text-white mt-12">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+            <!-- FOOTER CONTENT -->
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-12">
+
+
+                <!-- BRAND -->
+
+                <div>
+                    <a href="index.html"  class="text-3xl font-black tracking-tight"> GOAL </a>
+
+                    <p class="mt-4 max-w-xs text-sm leading-6 text-gray-400">
+                        Your source for the latest football news,
+                        transfer updates, match stories, scores and more.
+                    </p>
+                </div>
+
+
+                <!-- NEWS -->
+                <div>
+                    <h2 class="text-sm font-bold uppercase tracking-wider"> News </h2>
+
+                    <ul class="mt-5 space-y-3 text-sm text-gray-400">
+
+                        <li>
+                            <a href="latest-news.html" class="hover:text-white transition"> Latest News </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-white transition"> Breaking News </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="hover:text-white transition"> Transfers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-white transition"> Match News
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- FOOTBALL -->
+
+                <div>
+
+                    <h2 class="text-sm font-bold uppercase tracking-wider"> Football </h2>
+
+                    <ul class="mt-5 space-y-3 text-sm text-gray-400">
+
+                        <li>
+                            <a href="#" class="hover:text-white transition"> Premier League</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-white transition"> Champions League </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-white transition"> La Liga</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-white transition"> International Football</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- CONNECT -->
+
+                <div>
+
+                    <h2 class="text-sm font-bold uppercase tracking-wider"> Connect</h2>
+
+                    <p class="mt-5 text-sm leading-6 text-gray-400">
+                        Follow us for the latest football stories,
+                        updates and breaking news.
+                    </p>
+                    <div class="flex items-center gap-3 mt-5">
+
+
+                        <!-- FACEBOOK -->
+
+                        <a href="#"
+                            aria-label="Facebook"
+                            class="w-9 h-9 flex items-center justify-center
+                            rounded-full bg-gray-800
+                            hover:bg-white hover:text-black transition">
+
+                            <span class="font-bold"> f </span>
+                        </a>
+
+
+                        <!-- X -->
+
+                        <a href="#"
+                            aria-label="X"
+                            class="w-9 h-9 flex items-center justify-center
+                            rounded-full bg-gray-800
+                            hover:bg-white hover:text-black transition">
+
+                            <span class="font-medium"> 𝕏 </span>
+                        </a>
+
+
+                        <!-- INSTAGRAM -->
+
+                        <a href="#"
+                            aria-label="Instagram"
+                            class="w-9 h-9 flex items-center justify-center
+                            rounded-full bg-gray-800
+                            hover:bg-white hover:text-black transition">
+
+                            <span class="text-lg font-medium"> ◎ </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div
+                class="border-t border-gray-800 py-6
+                flex flex-col md:flex-row
+                items-center justify-between
+                gap-4">
+
+                <p class="text-xs text-gray-500">
+                    © 2026 Football News. All rights reserved.
+                </p>
+                <div class="flex items-center gap-5 text-xs text-gray-500">
+
+                    <a href="#" class="hover:text-white transition"> Privacy</a>
+
+                    <a href="#" class="hover:text-white transition"> Terms </a>
+
+                    <a href="#" class="hover:text-white transition"> Contact </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
