@@ -1,123 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latest News | Football News</title>
 
-    <!-- Tailwind CSS -->
+    <title>GOAL Clone</title>
+
+    <!--Tailwind css-->
     <link rel="stylesheet" href="./dist/output.css">
+    <!-- FontAwesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+
 </head>
+
 <body class="bg-gray-100 text-gray-900">
 
     <!-- ================= HEADER ================= -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-black text-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex items-center justify-between h-16">
 
-                <!-- LOGO -->
+        <div class="mx-auto max-w-7xl px-4 ">
+
+            <div class="flex  items-center justify-between h-16">
+
+                <!-- ================= LOGO ================= -->
                 <a href="index.html"
-                    class="text-2xl font-extrabold tracking-tight">GOAL</a>
+                    class="flex shrink-0 items-center border-x-8 border-t-8 border-gray-600 px-3 py-1
+                           text-2xl font-black tracking-tight ">
+                    GOAL
+                </a>
 
-                <!--===== DESKTOP NAVIGATION =====-->
-                <nav class="hidden md:flex items-center gap-6">
 
-                    <a href="index.html" class="text-sm font-medium hover:text-gray-300 transition">Home</a>
+                <!-- ================= DESKTOP NAVIGATION ================= -->
+                <nav class="hidden xl:flex items-center gap-3 ml-2">
 
-                    <a href="latest-news.html" class="text-sm font-medium text-red-500">News</a>
+                    <!-- SCORES -->
+                    <a href="#" class="flex items-center justify-between py-4
+                      text-base font-extrabold uppercase border-gray-800
+                      hover:text-gray-400 transition">
+                      SCORES
+                    </a>
 
-                    <a href="#" class="text-sm font-medium hover:text-gray-300 transition">Transfers</a>
+                    <!-- LATEST -->
+                    <div class="relative group">
+                        <button class="flex items-center justify-between py-4
+                                      text-base font-bold uppercase border-gray-800
+                                      hover:text-gray-400 transition">
+                            LATEST
+                            <svg class="h-3 w-3 transition-transform group-hover:rotate-180"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="m19 9-7 7-7-7" />
+                            </svg>
+                        </button>
 
-                    <a href="#" class="text-sm font-medium hover:text-gray-300 transition">Scores</a>
+
+                        <!-- LATEST MEGA MENU -->
+                        <div class="invisible absolute left-0 top-full w-[620px]
+                                    translate-y-2 opacity-0
+                                    bg-white text-black shadow-xl
+                                    transition-all duration-200
+                                    group-hover:visible
+                                    group-hover:translate-y-0
+                                    group-hover:opacity-100">
+
+                            <div class="grid grid-cols-3 gap-8 p-7">
+
+                                <!-- COLUMN 1 -->
+                                <div>
+                                    <h3 class="mb-4 text-xs font-black uppercase text-gray-500">
+                                        Latest
+                                    </h3>
+
+                                    <a href="latest-news.html" class="mega-link"> Latest News</a>
+
+                                    <a href="#" class="mega-link">Transfer News </a>
+
+                                    <a href="#" class="mega-link"> Features</a>
+
+                                    <a href="#" class="mega-link">Opinion</a>
+
+                                    <a href="#" class="mega-link"> Videos</a>
+                                </div>
+
+
+                                <!-- COLUMN 2 -->
+                                <div>
+                                    <h3 class="mb-4 text-xs font-black uppercase text-gray-500">
+                                        Teams
+                                    </h3>
+
+                                    <a href="#" class="mega-link">Real Madrid</a>
+
+                                    <a href="#" class="mega-link">Barcelona</a>
+
+                                    <a href="#" class="mega-link">Manchester United</a>
+
+                                    <a href="#" class="mega-link"> Liverpool </a>
+
+                                    <a href="#" class="mega-link">Arsenal</a>
+                                </div>
+
+
+                                <!-- COLUMN 3 -->
+                                <div>
+                                    <h3 class="mb-4 text-xs font-black uppercase text-gray-500">
+                                        Players
+                                    </h3>
+
+                                    <a href="#" class="mega-link"> Lionel Messi </a>
+
+                                    <a href="#" class="mega-link">Cristiano Ronaldo</a>
+
+                                    <a href="#" class="mega-link"> Kylian Mbappé </a>
+
+                                    <a href="#" class="mega-link"> Lamine Yamal</a>
+
+                                    <a href="#" class="mega-link"> Jude Bellingham</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORUMS -->
+                    <a href="#" 
+                    class="flex items-center justify-between py-4
+                          text-base font-bold uppercase border-gray-800
+                          hover:text-gray-400 transition">
+                          FORUMS
+                    </a>
+
+
+                    <!-- COMPETITIONS -->
+                    <div class="relative group">
+
+                        <button class="flex items-center justify-between py-4
+                                      text-base font-bold uppercase border-gray-800
+                                      hover:text-gray-400 transition">
+                            COMPETITIONS
+
+                            <svg class="h-3 w-3 transition-transform group-hover:rotate-180"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2">
+
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="m19 9-7 7-7-7" />
+
+                            </svg>
+                        </button>
+
+
+                        <!-- COMPETITIONS MEGA MENU -->
+                        <div class="invisible absolute left-0 top-full w-[650px]
+                                    translate-y-2 opacity-0
+                                    bg-white text-black shadow-xl
+                                    transition-all duration-200
+                                    group-hover:visible
+                                    group-hover:translate-y-0
+                                    group-hover:opacity-100">
+
+                            <div class="grid grid-cols-3 gap-8 p-7">
+
+                                <div>
+
+                                    <h3 class="mega-title"> Europe </h3>
+
+                                    <a href="#" class="mega-link"> Premier League </a>
+
+                                    <a href="#" class="mega-link"> Champions League </a>
+
+                                    <a href="#" class="mega-link"> Europa League</a>
+
+                                    <a href="#" class="mega-link"> La Liga </a>
+
+                                    <a href="#" class="mega-link">  Serie A</a>
+                                </div>
+
+
+                                <div>
+
+                                    <h3 class="mega-title"> More Europe </h3>
+
+                                    <a href="#" class="mega-link"> Bundesliga </a>
+
+                                    <a href="#" class="mega-link"> Ligue 1</a>
+
+                                    <a href="#" class="mega-link"> FA Cup </a>
+
+                                    <a href="#" class="mega-link"> Carabao Cup </a>
+
+                                    <a href="#" class="mega-link"> Women's Champions League </a>
+                                </div>
+
+
+                                <div>
+
+                                    <h3 class="mega-title"> International</h3>
+
+                                    <a href="#" class="mega-link"> World Cup </a>
+
+                                    <a href="#" class="mega-link"> Africa Cup of Nations</a>
+
+                                    <a href="#" class="mega-link"> Women's World Cup </a>
+
+                                    <a href="#" class="mega-link"> International Football</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- OTHER LINKS -->
+                    <a href="#" 
+                      class="flex items-center justify-between py-4
+                          text-base font-bold uppercase border-gray-800
+                          hover:text-gray-400 transition">
+                         NEWSLETTERS
+                  </a>
 
                     <a href="#"
-                        class="text-sm font-medium hover:text-gray-300 transition"> Teams</a>
+                      class="flex items-center justify-between py-4
+                             text-base font-bold uppercase border-gray-800
+                             hover:text-gray-400 transition">
+                              INDIVISA
+                    </a>
+
+                    <a href="#"
+                      class="flex items-center justify-between py-4
+                            text-base font-bold uppercase border-gray-800
+                            hover:text-gray-400 transition"> 
+                            GOALSTUDIO
+                    </a>
+
+                    <a href="#" 
+                      class="flex items-center justify-between py-4
+                             text-base font-bold uppercase border-gray-800
+                              hover:text-gray-400 transition">
+                               SHOP
+                    </a>
                 </nav>
 
 
-                <!-- RIGHT SIDE ACTIONS -->
-                <div class="flex items-center gap-4">
+                <!-- ================= RIGHT ICONS ================= -->
+                <div class="flex items-center gap-1">
 
-                    <!--===== SEARCH ========-->
-                    <button type="button" aria-label="Search"  class="hover:text-gray-300 transition">
+                    <!-- SEARCH -->
+                    <div class="flex items-center gap-2 rounded-full bg-brand-bg px-3 py-2 text-brand-gray">
+          <i class="fa-solid fa-magnifying-glass "></i>
+           <input type="text" placeholder="Search for something" 
+           class="hidden sm:block w-32 lg:w-40 bg-transparent outline-none text-sm text-brand-darkText">
+        </div>
+
+                    <!-- PROFILE -->
+                    <button
+                        class="icon-button hidden sm:flex"
+                        aria-label="Profile">
 
                         <svg xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke-width="2"
                             stroke="currentColor"
-                            class="w-5 h-5">
+                            stroke-width="2">
 
-                            <path
-                                stroke-linecap="round"
+                            <path stroke-linecap="round"
                                 stroke-linejoin="round"
-                                d="m21 21-4.35-4.35m0 0A7.5 7.5 0 1 0 6.04 6.04a7.5 7.5 0 0 0 10.61 10.61Z" />
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0
+                                   3.75 3.75 0 0 1 7.5 0ZM4.5 20.25
+                                   a8.25 8.25 0 0 1 15 0" />
+
                         </svg>
 
                     </button>
 
-                    <!--======= PROFILE =====-->
-                    <button type="button" aria-label="Profile" class="hover:text-gray-300 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke="currentColor"
-                            class="w-5 h-5">
 
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M15.75 6.75a3.75 3.75 0 1 1-7.5 0
-                                3.75 3.75 0 0 1 7.5 0ZM4.5 20.25a7.5
-                                7.5 0 0 1 15 0" />
-                        </svg>
-                    </button>
-
-
-                    <!--====== MOBILE MENU BUTTON =======-->
-                    <button id="menu-button"
-                        type="button"
+                    <!-- MOBILE MENU -->
+                    <button
+                        id="menuButton"
+                        class="icon-button xl:hidden"
                         aria-label="Open menu"
-                        class="md:hidden hover:text-gray-300 transition">
+                        aria-expanded="false">
 
-                        <svg xmlns="http://www.w3.org/2000/svg"
+                        <svg id="menuIcon"
+                            xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke-width="2"
                             stroke="currentColor"
-                            class="w-6 h-6">
+                            stroke-width="2">
 
-                            <path
-                                stroke-linecap="round"
+                            <path stroke-linecap="round"
                                 stroke-linejoin="round"
                                 d="M4 6h16M4 12h16M4 18h16" />
+
                         </svg>
+
                     </button>
+
                 </div>
             </div>
         </div>
 
 
-        <!--=========== MOBILE NAVIGATION =========-->
-        <nav id="mobile-menu"
-            class="hidden md:hidden border-t border-gray-700">
+        <!-- ================= MOBILE / TABLET MENU ================= -->
+        <div id="mobileMenu"
+            class="hidden border-t border-gray-800 bg-black xl:hidden">
 
-            <div class="px-4 py-4 space-y-4">
+            <nav class="mx-auto max-w-7xl px-4 pb-5 sm:px-6">
 
-                <a href="index.html" class="block hover:text-gray-300 transition"> Home</a>
+                <a href="#" class="mobile-link">
+                    SCORES
+                </a>
 
-                <a href="latest-news.html" class="block text-red-500"> News</a>
+                <!-- MOBILE LATEST -->
+                <button id="latestButton"
+                    class="mobile-link flex w-full items-center justify-between">
 
-                <a href="#" class="block hover:text-gray-300 transition">Transfers</a>
+                    <span>LATEST</span>
 
-                <a href="#" class="block hover:text-gray-300 transition"> Scores</a>
+                    <svg id="latestArrow"
+                        class="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2">
 
-                <a href="#" class="block hover:text-gray-300 transition">Teams</a>
-            </div>
-        </nav>
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m19 9-7 7-7-7" />
+
+                    </svg>
+
+                </button>
+
+                <div id="latestMobileMenu"
+                    class="hidden bg-gray-950 px-4">
+
+                    <a href="latest-news.html" class="mobile-sub-link"> Latest News</a>
+
+                    <a href="#" class="mobile-sub-link"> Transfer News </a>
+
+                    <a href="#" class="mobile-sub-link"> Features </a>
+
+                    <a href="#" class="mobile-sub-link"> Opinion </a>
+
+                    <a href="#" class="mobile-sub-link"> Videos</a>
+
+                </div>
+
+                <a href="#" class="mobile-link">FORUMS</a>
+
+
+                <!-- MOBILE COMPETITIONS -->
+                <button id="competitionButton"
+                    class="mobile-link flex w-full items-center justify-between">
+
+                    <span>COMPETITIONS</span>
+
+                    <svg id="competitionArrow"
+                        class="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2">
+
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m19 9-7 7-7-7" />
+
+                    </svg>
+
+                </button>
+
+                <div id="competitionMobileMenu"
+                    class="hidden bg-gray-950 px-4">
+
+                    <a href="#" class="mobile-sub-link"> Premier League</a>
+
+                    <a href="#" class="mobile-sub-link"> Champions League</a>
+
+                    <a href="#" class="mobile-sub-link"> Europa League </a>
+
+                    <a href="#" class="mobile-sub-link"> La Liga </a>
+
+                    <a href="#" class="mobile-sub-link"> Serie A</a>
+
+                    <a href="#" class="mobile-sub-link">Bundesliga</a>
+
+                    <a href="#" class="mobile-sub-link"> Ligue 1</a>
+
+                    <a href="#" class="mobile-sub-link"> World Cup</a>
+                </div>
+
+                <a href="#" class="mobile-link"> NEWSLETTERS</a>
+
+                <a href="#" class="mobile-link"> INDIVISA</a>
+
+                <a href="#" class="mobile-link"> GOALSTUDIO</a>
+
+                <a href="#" class="mobile-link"> SHOP</a>
+            </nav>
+        </div>
     </header>
-
 
     <!-- ================= BREAKING NEWS ================= -->
 
